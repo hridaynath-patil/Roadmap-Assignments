@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio | Bento Layout</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="bento-container">
+        
+        <!-- Header Section (Hero) -->
+        <header class="bento-card bento-hero">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="highlight">Alex</span>.</h1>
+                <p>I build exceptional digital experiences for the modern web.</p>
+                <a href="#contact" class="btn">Let's Talk <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="hero-img">
+                <!-- Abstract 3d shape or portrait avatar -->
+                <div class="avatar-glow"></div>
+            </div>
+        </header>
+
+        <!-- About Section -->
+        <section class="bento-card bento-about" id="about">
+            <h2>About Me</h2>
+            <p>I'm a multidisciplinary designer and front-end developer based in London. My focus is on creating intuitive, accessible, and beautifully crafted interfaces that bridge the gap between design and engineering.</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-dribbble"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="bento-card bento-skills" id="skills">
+            <h2>Core Stack</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fab fa-html5" style="color: #e34f26;"></i>
+                    <span>HTML/CSS</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-js" style="color: #f7df1e;"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-react" style="color: #61dafb;"></i>
+                    <span>React JS</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-figma" style="color: #f24e1e;"></i>
+                    <span>Figma</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-node-js" style="color: #339933;"></i>
+                    <span>Node.js</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-python" style="color: #3776ab;"></i>
+                    <span>Python</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (Project 1) -->
+        <section class="bento-card bento-project project-1" id="projects">
+            <div class="project-info">
+                <span class="tag">E-Commerce</span>
+                <h3>Nova Market</h3>
+                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </section>
+
+        <!-- Projects Section (Project 2) -->
+        <section class="bento-card bento-project project-2">
+            <div class="project-info">
+                <span class="tag">SaaS App</span>
+                <h3>TaskFlow</h3>
+                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </section>
+
+        <!-- Projects Section (Project 3) -->
+        <section class="bento-card bento-project project-3">
+            <div class="project-info">
+                <span class="tag">Marketing Website</span>
+                <h3>Vertex</h3>
+                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </section>
+
+        <!-- Statistics or Fun Fact -->
+        <section class="bento-card bento-stats">
+            <div class="stat-box">
+                <h3 class="counter">5+</h3>
+                <p>Years Exp.</p>
+            </div>
+            <div class="stat-box">
+                <h3 class="counter">40+</h3>
+                <p>Projects</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="bento-card bento-contact" id="contact">
+            <div class="contact-header">
+                <h2>Ready to start your next project?</h2>
+                <div class="status">
+                    <span class="pulse"></span> Available for freelance work
+                </div>
+            </div>
+            
+            <form onsubmit="event.preventDefault();" class="contact-form">
+                <input type="email" placeholder="Your Email Address" required>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </section>
+
+    </div>
+
+</body>
+</html>

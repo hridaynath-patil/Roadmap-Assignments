@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Brand Logo -->
+            <a href="#" class="brand">
+                <div class="logo-box">V</div>
+                <span>Vertigo</span>
+            </a>
+
+            <!-- Checkbox Hack for Mobile Menu -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span class="hamburger"></span>
+            </label>
+
+            <!-- Navigation Links -->
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-link">Home</a></li>
+                    <li><a href="#" class="nav-link">Products</a></li>
+                    <li><a href="#" class="nav-link">Services</a></li>
+                    <li><a href="#" class="nav-link">About Us</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="#" class="btn btn-login">Log In</a>
+                    <a href="#" class="btn btn-signup">Sign Up Free</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content-placeholder">
+        <h1>Responsive Navigation Showcase</h1>
+        <p>Resize the browser window to see the desktop menu transform into a mobile-friendly hamburger menu.</p>
+        <p class="features-list">
+            <i class="fas fa-check-circle"></i> Pure HTML & CSS (No JavaScript needed for toggle) <br>
+            <i class="fas fa-check-circle"></i> Smooth hover animations for desktop links <br>
+            <i class="fas fa-check-circle"></i> Animated hamburger icon transformation <br>
+            <i class="fas fa-check-circle"></i> Glassmorphism header backdrop
+        </p>
+    </main>
+
+</body>
+</html>

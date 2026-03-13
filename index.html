@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Assignments</title>
+    <style>
+        :root {
+            --primary: #4F46E5;
+            --primary-hover: #4338CA;
+            --bg: #F9FAFB;
+            --text-main: #111827;
+            --text-muted: #6B7280;
+            --card-bg: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, var(--primary), #EC4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-number {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+        }
+
+        .card h2 {
+            font-size: 1.25rem;
+            margin: 0 0 8px 0;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin: 0 0 16px 0;
+            flex-grow: 1;
+        }
+
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .card-link::after {
+            content: '→';
+            margin-left: 4px;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover .card-link::after {
+            transform: translateX(4px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Web Development Assignments</h1>
+        <p class="subtitle">A collection of 8 assignments covering HTML structures, CSS styling, layouts, and responsive design.</p>
+    </header>
+
+    <div class="grid">
+        <a href="Assignment_1_Personal_Profile_Page/index.html" class="card">
+            <span class="card-number">Assignment 1</span>
+            <h2>Personal Profile Page</h2>
+            <p>A basic HTML-only profile page featuring an image, about section, skills, and links.</p>
+            <span class="card-link">View Project</span>
+        </a>
+
+        <a href="Assignment_2_Blog_Page_Layout/index.html" class="card">
+            <span class="card-number">Assignment 2</span>
+            <h2>Blog Page Layout</h2>
+            <p>An HTML structure with a header, navigation, blog posts, sidebar, and footer.</p>
+            <span class="card-link">View Project</span>
+        </a>
+
+        <a href="Assignment_3_Registration_Form/index.html" class="card">
+            <span class="card-number">Assignment 3</span>
+            <h2>Registration Form</h2>
+            <p>A comprehensive HTML form with text inputs, password, radio buttons, and dropdowns.</p>
+            <span class="card-link">View Project</span>
+        </a>
+
+        <a href="Assignment_4_Style_Profile_Page/index.html" class="card">
+            <span class="card-number">Assignment 4</span>
+            <h2>Style Profile Page</h2>
+            <p>The profile page enhanced with custom fonts, colors, card layouts, and spacing.</p>
+            <span class="card-link">View Project</span>
+        </a>
+
+        <a href="Assignment_5_Styled_Blog_Layout/index.html" class="card">
+            <span class="card-number">Assignment 5</span>
+            <h2>Styled Blog Layout</h2>
+            <p>A beautifully styled blog page with typography hierarchy and hover effects.</p>
+            <span class="card-link">View Project</span>
+        </a>
+
+        <a href="Assignment_6_Landing_Page/index.html" class="card">
+            <span class="card-number">Assignment 6</span>
+            <h2>Landing Page</h2>
+            <p>A complete landing page with a hero section, features list, about, and a footer.</p>
+            <span class="card-link">View Project</span>
+        </a>
+
+        <a href="Assignment_7_Responsive_Navigation_Bar/index.html" class="card">
+            <span class="card-number">Assignment 7</span>
+            <h2>Responsive Nav Bar</h2>
+            <p>A navigation bar that adapts to screen size, offering a desktop and mobile menu.</p>
+            <span class="card-link">View Project</span>
+        </a>
+
+        <a href="Assignment_8_Responsive_Portfolio_Website/index.html" class="card">
+            <span class="card-number">Assignment 8</span>
+            <h2>Responsive Portfolio</h2>
+            <p>A fully responsive, multi-section portfolio designed for desktop and mobile.</p>
+            <span class="card-link">View Project</span>
+        </a>
+    </div>
+</body>
+</html>
