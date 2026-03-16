@@ -31,7 +31,7 @@ body {
     align-items: center;
     padding: 2rem;
     position: relative;
-    overflow: hidden;
+    overflow: auto; /* Changed from hidden to auto to allow scrolling */
 }
 
 /* Background Gradients */
