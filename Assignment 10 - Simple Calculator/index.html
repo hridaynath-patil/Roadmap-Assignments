@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator-card">
+            <div class="header">
+                <h1>Calc</h1>
+                <p>Simple Calculator</p>
+            </div>
+            
+            <div class="display-section">
+                <div class="result-box">
+                    <span id="result">= 0</span>
+                </div>
+            </div>
+            
+            <div class="inputs-section">
+                <input type="number" id="num1" placeholder="Number 1" />
+                <input type="number" id="num2" placeholder="Number 2" />
+            </div>
+            
+            <div class="operations-grid">
+                <button class="op-btn" data-action="add">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    <span>Addition</span>
+                </button>
+                <button class="op-btn" data-action="subtract">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    <span>Subtraction</span>
+                </button>
+                <button class="op-btn" data-action="multiply">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    <span>Multiplication</span>
+                </button>
+                <button id="clearBtn" class="clear-btn">Clear All</button>
+            </div>
+            <div id="error-msg" class="error-msg hidden">Please enter valid numbers in both fields.</div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
