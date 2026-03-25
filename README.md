@@ -1,6 +1,6 @@
 # Roadmap Assignments
 
-This repository contains 12 web development assignments focused on HTML, CSS, layouts, responsive design, and JavaScript fundamentals.
+This repository contains 14 web development assignments focused on HTML, CSS, layouts, responsive design, JavaScript fundamentals, and API integrations.
 
 ## Live Demo
 You can view the live assignments here: **[View Live Site](https://hridaynath-patil.github.io/Roadmap-Assignments/)**
@@ -18,3 +18,5 @@ You can view the live assignments here: **[View Live Site](https://hridaynath-pa
 *   **Assignment 10**: Simple Calculator (HTML + CSS + JS)
 *   **Assignment 11**: To-Do List App (HTML + CSS + JS)
 *   **Assignment 12**: Notes App (HTML + CSS + JS + LocalStorage)
+*   **Assignment 13**: Weather App (HTML + CSS + JS + API)
+*   **Assignment 14**: Movie Search App (HTML + CSS + JS + API)
