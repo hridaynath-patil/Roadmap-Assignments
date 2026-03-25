@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Movie Search</h1>
+            <div class="search-box">
+                <input type="text" id="movieInput" placeholder="Search for movies (e.g., Matrix, Batman)..." autocomplete="off">
+                <button id="searchBtn">Search</button>
+            </div>
+            <div id="loading" class="hidden">Searching for movies...</div>
+            <div id="errorMsg" class="hidden error"></div>
+        </header>
+
+        <main id="movieContainer" class="movie-grid">
+            <!-- Movie cards will be dynamically injected here -->
+        </main>
+    </div>
+
+    <!-- IMPORTANT: In a real app, do not expose your API key. Replace 'YOUR_API_KEY' with your actual OMDB API key. -->
+    <script>
+        // Note: Please set a valid API key below
+        const OMDB_API_KEY = 'aeeb680c';
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
