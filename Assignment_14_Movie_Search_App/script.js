@@ -4,6 +4,41 @@ const loading = document.getElementById('loading');
 const errorMsg = document.getElementById('errorMsg');
 const movieContainer = document.getElementById('movieContainer');
 
+// Modal Elements
+const movieModal = document.getElementById('movieModal');
+const closeBtn = document.querySelector('.close-btn');
+const movieDetailsBody = document.getElementById('movieDetailsBody');
+
+closeBtn.addEventListener('click', () => {
+    movieModal.classList.add('hidden');
+});
+
+window.addEventListener('click', (e) => {
+    if (e.target === movieModal) {
+        movieModal.classList.add('hidden');
+    }
+});
+
+// Debounce helper for real-time search
+const debounce = (func, delay) => {
+    let timeoutId;
+    return (...args) => {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+            func.apply(null, args);
+        }, delay);
+    };
+};
+
+const debouncedSearch = debounce((query) => {
+    if (query) {
+        searchMovies(query);
+    } else {
+        movieContainer.innerHTML = '';
+        errorMsg.classList.add('hidden');
+    }
+}, 500);
+
 searchBtn.addEventListener('click', () => {
     const query = movieInput.value.trim();
     if (query) {
@@ -11,13 +46,10 @@ searchBtn.addEventListener('click', () => {
     }
 });
 
-movieInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-        const query = movieInput.value.trim();
-        if (query) {
-            searchMovies(query);
-        }
-    }
+// Input event triggers debounced search (real-time typing)
+movieInput.addEventListener('input', (e) => {
+    const query = e.target.value.trim();
+    debouncedSearch(query);
 });
 
 const searchMovies = async (query) => {
@@ -54,10 +86,12 @@ const searchMovies = async (query) => {
 };
 
 const displayMovies = (movies) => {
-    movies.forEach(movie => {
+    movies.forEach((movie, index) => {
         // Create card element
         const cardContainer = document.createElement('div');
         cardContainer.className = 'movie-card';
+        cardContainer.style.animationDelay = `${index * 0.05}s`; // Staggered animation
+        cardContainer.dataset.id = movie.imdbID;
 
         // Check for placeholder image
         const posterSrc = movie.Poster !== "N/A" ? movie.Poster : '';
@@ -71,6 +105,46 @@ const displayMovies = (movies) => {
             </div>
         `;
 
+        // Movie Details page on click
+        cardContainer.addEventListener('click', () => {
+            fetchMovieDetails(movie.imdbID);
+        });
+
         movieContainer.appendChild(cardContainer);
     });
+};
+
+const fetchMovieDetails = async (id) => {
+    try {
+        const response = await fetch(`https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&i=${id}&plot=full`);
+        if (!response.ok) throw new Error('Failed to fetch movie details.');
+        const data = await response.json();
+        
+        if (data.Response === "False") throw new Error(data.Error);
+        
+        displayMovieDetails(data);
+    } catch (error) {
+        alert(error.message);
+    }
+};
+
+const displayMovieDetails = (movie) => {
+    const posterSrc = movie.Poster !== "N/A" ? movie.Poster : '';
+    const imgDisplay = posterSrc ? `<img src="${posterSrc}" alt="${movie.Title} poster" class="modal-poster">` : `<div class="modal-poster" style="display:flex;align-items:center;justify-content:center;background:#0f3460;min-height:300px;color:#888;">No Image</div>`;
+
+    movieDetailsBody.innerHTML = `
+        ${imgDisplay}
+        <div class="modal-info">
+            <h2>${movie.Title} (${movie.Year})</h2>
+            <p><strong>Genre:</strong> ${movie.Genre}</p>
+            <p><strong>Runtime:</strong> ${movie.Runtime}</p>
+            <p><strong>Director:</strong> ${movie.Director}</p>
+            <p><strong>Actors:</strong> ${movie.Actors}</p>
+            <p><strong>IMDb Rating:</strong> ⭐ ${movie.imdbRating}</p>
+            <p><strong>Plot:</strong><br> ${movie.Plot}</p>
+        </div>
+    `;
+    
+    // Show modal
+    movieModal.classList.remove('hidden');
 };
