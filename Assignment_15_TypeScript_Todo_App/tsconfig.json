@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["ES2017", "DOM"],
+    "strict": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "module": "ES2015",
+    "moduleResolution": "bundler",
+    "ignoreDeprecations": "5.0"
+  },
+  "include": ["src/**/*.ts"]
+}
