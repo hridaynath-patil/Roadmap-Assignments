@@ -1,6 +1,7 @@
 .app-container {
   width: 100vw;
   max-width: 600px;
+  margin: 0 auto;
 }
 
 .todo-card {

@@ -1,6 +1,7 @@
 .weather-container {
   width: 100vw;
   max-width: 450px;
+  margin: 0 auto;
 }
 
 .weather-card {
