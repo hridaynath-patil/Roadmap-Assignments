@@ -1,6 +1,6 @@
 # Roadmap Assignments
 
-This repository contains 19 web development assignments focused on HTML, CSS, layouts, responsive design, JavaScript fundamentals, API integrations, TypeScript, and ReactJS.
+This repository contains 20 web development assignments focused on HTML, CSS, layouts, responsive design, JavaScript fundamentals, API integrations, TypeScript, and ReactJS.
 
 ## Live Demo
 You can view the live assignments here: **[View Live Site](https://hridaynath-patil.github.io/Roadmap-Assignments/)**
@@ -25,3 +25,5 @@ You can view the live assignments here: **[View Live Site](https://hridaynath-pa
 *   **Assignment 17**: React Counter App (ReactJS) — Component state with useState hook
 *   **Assignment 18**: React Todo App (ReactJS) — Add/Delete/Complete tasks with localStorage
 *   **Assignment 19**: React Weather App (ReactJS) — Fetching Open-Meteo API using hooks with loading/error states
+*   **Assignment 20**: Multi-Page React App (ReactJS) — React Router, dynamic routes, and premium glassmorphism design
+
